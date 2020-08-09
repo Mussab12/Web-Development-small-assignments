@@ -1,0 +1,33 @@
+<!Doc html>
+<html lan="en">
+<head>
+<title>
+Onload event/onblur event
+
+</title>
+<script type="text/javascript">
+function checkfield1()
+{
+var field=document.getElementById("field1").value;
+if(field.length<5)
+document.getElementById("message1").innerHTML="Too Short!";
+else
+document.getElementById("message1").innerHTML="Too long!!";
+}
+function checkfield2()
+{
+var field=document.getElementById("field1").value;
+if(field.length!="")
+document.getElementById("message2").innerHTML="Input accepted!";
+else
+document.getElementById("message2").innerHTML="N";
+}
+</script>
+</head>
+<p>onblur event</p>
+<input id="field1" type="text" onblur="checkfield1();"/> <span id="message1"></span>
+<input id="field2" type="text" onblur="checkfield2();"/> <span id="message2"></span>
+<input id="field3" type="text"/><span id="message3"></span>
+
+
+</body>
