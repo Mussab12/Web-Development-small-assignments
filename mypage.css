@@ -1,0 +1,20 @@
+#heading1{
+	color:red;
+}
+.heading2{
+	color:red;
+	border:5px dotted red;
+}
+tr,td{
+	border:2px solid black;
+	
+}
+.para{
+	color:blue;
+	clear:left;
+	font-style:italic;
+	font-family:verdana;
+}
+#image{
+	border:2px solid gray;
+}
