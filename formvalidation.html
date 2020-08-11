@@ -1,0 +1,96 @@
+<!DOC html>
+<head>
+
+<title>
+FORM VALIDATION
+</title>
+<script type="text/javascript">
+function checkfirstname()
+{
+var name=document.getElementById("firstname").value;
+if(name.length>1&&name.length<=15)
+{
+document.getElementById("firstnameprompt").style.color="green";
+document.getElementById("firstnameprompt").innerHTML="<strong>Valid Input</strong>";
+}
+else
+{
+document.getElementById("firstnameprompt").style.color="red";
+document.getElementById("firstnameprompt").innerHTML="<strong>Please enter between 2 to 15 characters</strong>";
+}
+}
+function checklastname()
+{
+ var surname=document.getElementById("lastname").value;
+ if(surname.length>1&&surname.length<=7)
+ {
+ document.getElementById("lastnameprompt").style.color="green";
+ document.getElementById("lastnameprompt").innerHTML="<strong>Valid Input</strong>";
+
+
+}
+else{
+document.getElementById("lastnameprompt").style.color="red";
+document.getElementById("lastnameprompt").innerHTML="<strong>Please enter between 2 to 7 characters</strong>";
+}
+
+
+
+}
+function calculateorder()
+{
+ var firstName=document.getElementById("firstname").value;
+ var lastName=document.getElementById("lastname").value;
+ var username=firstName+" "+lastName;
+ var quant=document.getElementById("quantity").value;
+ var totalprice=document.getElementById("price").value;
+ document.getElementById("ordersummary").innerHTML="<h2>ORDER SUMMARY:</h2>";
+ document.getElementById("ordersummary").innerHTML="username";
+ document.getElementById("ordersummary").innerHTML="<p>Order Total: $"+totalprice*quant+ "</p>"; 
+}
+ 
+ 
+
+</script>
+</head>
+<body> 
+<h1 style="color:red;">TASTY BURGER AND BROAST SHOP</h1>
+<img id="image" src="https://www.pngkey.com/png/detail/214-2148507_broasted-by-sugarbun.png" alt="Broasted By Sugarbun@pngkey.com"height="450px"width="450px">
+<table border="0">
+<tr>
+<td style="font-size:large;font-weight:bold;">First Name:</td>	
+
+<td><input name="firstname" type="text"id="firstname"onblur="checkfirstname();"><span id="firstnameprompt"></span></td>
+</tr>
+<tr>
+<td style="font-weight:bold;font-size:large;">Last Name:</td>
+
+<td><input name="lastname"type="text"id="lastname"onblur="checklastname();"><span id="lastnameprompt"></td></span>
+</tr>
+<tr>
+<td style="font-weight:bold;font-size:large;">Category</td>
+<td><select id="food">
+<option value="BURGER">ZINGER BURGER</option>
+<option value="chicken">BROAST</option>
+<option value="shawarma">SHAWARMA</option>
+<option value="biryani">BIRYANI</option>
+<option value="wings">WINGS</option>
+<option value="fries">FRIES</option>
+<option value="softdrink">FIZZY DRINK</option>
+</td>
+</tr>
+<tr>
+
+<td style="font-weight:bold;font-size:large;">Quantity:</td> 
+<td><input id="quantity"name="quantity"type="number"></td>
+</tr>
+<tr>
+<td style="font-weight:bold;font-size:large;">Price:</td>
+<td><input id="price"name="price"type="number"</td>
+</tr>	
+<tr>
+<td style="border:5px solid black;font-weight:bold;font-size:large;"><span id="ordersummary" onclick="calculateorder();">ORDER NOW</span></td>
+</table>
+</body>
+
+</html>
